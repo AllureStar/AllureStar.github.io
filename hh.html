@@ -1,0 +1,88 @@
+
+
+<script type="text/javascript">
+  
+  // const a = 1;
+  // a = 10;
+  // console.log(a);
+
+  // let obj = {
+  //   p:[
+  //     'hello',
+  //     {y:'world'}
+  //   ]
+  // };
+  // let {p:[x,{y:y}]} = obj;
+  // console.log(x,y)
+
+  // let [a,b,c] =   'hel';
+  // console.log(a);
+  // console.log(b);
+  // console.log(c);
+  // let {length:len} = 'world';
+  // console.log(len);
+
+  // let {PI:p} = Math;
+  // // console.log(Math.PI);
+  // console.log(p);
+
+
+  // function f() {
+  //   return 'woaini';
+  // }
+  // let userName = 'xuejiaxing';
+  // let html = `<div>
+  // <p>${userName}</p>
+  // <a href='#'>${userName}</a>
+  // <p > ${f()}/p>
+  // </div>`
+  // console.log(html)
+
+  // function sum(...arg) {
+  //   let sum = 0;
+  //   arg.forEach(function(val){
+  //     sum += val;
+      
+  //   });
+  //   return sum;
+  // }
+  // console.log(sum(1,2,3));
+
+
+  // 箭头函数
+  // let fn = (val,val1) => val+val1;
+  // let s = fn(2,4);
+  // console.log(s);
+
+  // 箭头函数作用(a-b>0 反转    a-b<0 不反转) :简化回调函数
+  // let sumList = [12,23,53,1,89,0,13,5,7];
+  // sumList.sort(function(a,b){
+  //     return b-a;
+  // })
+
+    // sumList.sort((a,b) => a-b);
+      // console.log(sumList);
+
+
+    function timeout(){
+      let randNum = Math.random()*2;
+      let p = new Promise(function(resolve,reject){
+        setTimeout(function(){
+          if(randNum > 1){
+            resolve();
+          }else{
+            reject();
+          }
+        },randNum * 1000);
+      })
+      return p;
+    }
+    timeout().then(function(){
+      console.log('ok');
+    },function(){
+      console.log('false');
+    })
+
+  
+</script>
+</html>
